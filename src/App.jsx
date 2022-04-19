@@ -1,14 +1,14 @@
-import { useState } from 'react';
 import './App.css';
 import { useEthers } from '@usedapp/core';
 
+const shortenAddress = (addr) => `${addr.slice(0, 5)}...${addr.slice(-4)}`;
+
 const App = () => {
-  const [isConnected, setIsConnected] = useState(false);
   const { activateBrowserWallet, deactivate, account } = useEthers();
   return (
     <div className='container'>
       <h2>
-        {!account ? "Please connect your wallet." : `Connected Wallet: ${account}`}
+        {!account ? "Please connect your wallet." : `Connected Wallet: ${shortenAddress(account)}`}
       </h2>
       {!account ? (
         <button className="button connect" onClick={() => activateBrowserWallet()}>
