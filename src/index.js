@@ -1,9 +1,9 @@
+import { DAppProvider, Rinkeby } from '@usedapp/core';
+import { getDefaultProvider } from 'ethers';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import App from './App';
-import { ChainId, DAppProvider, Rinkeby } from '@usedapp/core';
-import { getDefaultProvider } from 'ethers';
+import './index.css';
 
 const config = {
   readOnlyChainId: Rinkeby.chainId,

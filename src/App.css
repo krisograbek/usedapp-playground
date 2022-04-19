@@ -1,8 +1,10 @@
 .container {
+  width: 90%;
   padding: 20px;
+  text-align: right;
 }
 
-.button {
+button {
   cursor: pointer;
   border: none;
   border-radius: 24px;

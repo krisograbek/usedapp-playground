@@ -11,11 +11,11 @@ const App = () => {
         {!account ? "Please connect your wallet." : `Connected Wallet: ${shortenAddress(account)}`}
       </h2>
       {!account ? (
-        <button className="button connect" onClick={() => activateBrowserWallet()}>
+        <button className="connect" onClick={() => activateBrowserWallet()}>
           Connect
         </button>
       ) : (
-        <button className="button disconnect" onClick={() => deactivate()}>
+        <button className="disconnect" onClick={() => deactivate()}>
           Disconnect
         </button>
       )}
