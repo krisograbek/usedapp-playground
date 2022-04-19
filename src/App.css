@@ -2,8 +2,7 @@
   padding: 20px;
 }
 
-.button-connect {
-  background-color: #3f50b5;
+.button {
   cursor: pointer;
   border: none;
   border-radius: 24px;
@@ -16,16 +15,11 @@
   width: 200px;
 }
 
-.button-disconnect {
+.connect {
+  background-color: #3f50b5;
+
+}
+
+.disconnect {
   background-color: #ba000d;
-  cursor: pointer;
-  border: none;
-  border-radius: 24px;
-  color: white;
-  padding: 16px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  width: 200px;
 }
