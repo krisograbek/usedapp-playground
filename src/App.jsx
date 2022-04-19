@@ -1,17 +1,24 @@
 import { useState } from 'react';
 import './App.css';
+import { useEthers } from '@usedapp/core';
 
 const App = () => {
   const [isConnected, setIsConnected] = useState(false);
+  const { activateBrowserWallet, deactivate, account } = useEthers();
   return (
     <div className='container'>
-      <h1>My App</h1>
-      <button
-        className={`button ${!isConnected ? 'connect' : 'disconnect'}`}
-        onClick={() => setIsConnected(prevState => !prevState)}
-      >
-        {!isConnected ? "Connect" : "Disconnect"}
-      </button>
+      <h2>
+        {!account ? "Please connect your wallet." : `Connected Wallet: ${account}`}
+      </h2>
+      {!account ? (
+        <button className="button connect" onClick={() => activateBrowserWallet()}>
+          Connect
+        </button>
+      ) : (
+        <button className="button disconnect" onClick={() => deactivate()}>
+          Disconnect
+        </button>
+      )}
     </div>
   );
 }
